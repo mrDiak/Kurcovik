@@ -1,0 +1,123 @@
+@font-face {
+  font-family: OpenSans-Reg;
+  src: url(../fonts/OpenSans-Regular.woff);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: OpenSans-Bold;
+  src: url(../fonts/OpenSans-Bold.woff);
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+.Caption-line::after{
+    content: "";
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 28px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 66px;
+    height: 3px;
+    background-color: #e1d9bd;
+  }
+
+.Our_Products{
+    font-family: OpenSans-Reg, Arial, serif;
+    font-size: 15px;
+}
+
+  .Text_Caption{
+    font-family: OpenSans-Bold, Arial, serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .OurProd_Main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .OurProd{
+      max-width: 345px;
+  }
+
+  .OurProd:nth-child(n+1){
+    margin-left: 65px;
+  }
+
+  .OurProd_1{background-image: url("../images/shop-item-desk1.jpg"); background-repeat: no-repeat;}
+  .OurProd_2{background-image: url("../images/shop-item-desk2.jpg"); background-repeat: no-repeat;}
+  .OurProd_3{background-image: url("../images/shop-item-desk3.jpg"); background-repeat: no-repeat;}
+
+  .OurProd_Img{
+    width: 300px;
+    height: 205px;
+  }
+
+  .OurProd_Img:nth-child(1), .OurProd_Img:nth-child(2) {
+    margin: 0px 25px;
+  }
+
+  .OurProd_Content{
+    border: 3px solid #d3c59d;
+    padding: 55px 20px 0px 20px;
+    margin-top: -30px;
+    height: 260px;
+  }
+
+  .OurProd_Caption{
+    text-align: start;
+  }
+
+  .OurProd-Text{
+    padding-top: 5px;
+    line-height: 1.2;
+  }
+
+  .OurProd_Text_Link{
+      text-decoration: none;
+      color: #b59f5b;
+  }
+
+  .Price_and_Button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .Price{
+    font-family: OpenSans-Bold, Arial, serif;
+  }
+
+  .Price_Regular{
+      font-size: 14px;
+      text-decoration: line-through;
+  }
+
+  .Price_Discont{
+      font-size: 20px;
+  }
+
+  .Button_Shop{
+    font-family: OpenSans-Bold, Arial, serif;
+    text-transform: uppercase;
+    width: 140px;
+    height: 48px;
+    border: none;
+    background-color: #b59f5b;
+    font-size: 14px;
+    color: #ffffff;
+    border: none;
+  }
