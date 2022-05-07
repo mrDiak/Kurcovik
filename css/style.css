@@ -133,9 +133,9 @@
     flex-direction: column;
     justify-content: flex-end;
     position: relative;
-    /* width: 25%; */
-    width: 415px;
-    height: 320px;
+    width: 25%;
+    /* width: 415px; */
+    min-height: 320px;
     z-index: 0;
   }
 
@@ -157,10 +157,14 @@
   }
 
   .NowTrend_content{
+    /* display: flex;
+    flex-direction: column;
+    flex-grow: 1; */
     /* box-sizing: border-box; */
     border: 3px solid #88733e;
     padding: 32px 35px;
-    margin: 0px 23px 15px 23px;
+    margin: 15px 23px;
+    /* max-height: 290px; */
   }
 
   .NowTrend_Font{
@@ -482,7 +486,7 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0px 15px;
+    padding: 0px 15px 65px 15px;
 
 }
 
@@ -501,6 +505,9 @@
 
   .OurProd{
       max-width: 345px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
   }
 
   .OurProd_1{background-image: url("../images/shop-item-desk1.jpg"); background-repeat: no-repeat;}
@@ -517,10 +524,14 @@
   }
 
   .OurProd_Content{
+
     border: 3px solid #d3c59d;
     padding: 45px 20px 0px 20px;
     margin-top: -30px;
-    height: 260px;
+    /* flex: 1 1 auto; */
+    /* height: 100%; */
+    flex-grow: 1;
+    padding-bottom: 25px;
   }
 
   .OurProd_Caption{
