@@ -715,14 +715,14 @@
   }
 
   .Screen_OpacityColor{
-    background-color: #000; /* Чёрный фон */
-    height: 100%; /* Высота максимальна */
-    left: 0; /* Нулевой отступ слева */
-    opacity: 0.50; /* Степень прозрачности */
-    position: fixed; /* Фиксированное положение */
-    top: 0; /* Нулевой отступ сверху */
-    width: 100%; /* Ширина максимальна */
-    z-index: 100; /* Заведомо быть НАД другими элементами */  
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;    
+    width: 100%;
+    background-color: #000;
+    opacity: 0.60;
+    z-index: 100;
   }
   
   .popup{
