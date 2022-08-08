@@ -15,7 +15,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
   .header{
@@ -144,7 +145,6 @@
     justify-content: flex-end;
     position: relative;
     width: 25%;
-    /* width: 415px; */
     min-height: 320px;
     z-index: 0;
   }
@@ -174,7 +174,7 @@
 
   .NowTrend_Font{
     font-family: OpenSans-Bold, Arial, serif;
-    font-size: 20px;
+    font-size: 1.25rem;
     text-transform: uppercase;
     line-height: 1.2;
     text-decoration: none;
@@ -203,7 +203,7 @@
     display: flex;
     flex-direction: row;
     font-family: OpenSans-Bold, Arial, serif;
-    font-size: 14px;
+    font-size: 0.875rem;
     text-transform: uppercase;
   }
 
@@ -265,28 +265,6 @@
   .Post-content{
     width: 370px;
     margin-left: 30px;
-  }
-
-  .Post-menu{
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    font-family: OpenSans-Bold, Arial, serif;
-    font-size: 14px;
-    text-transform: uppercase;
-  }
-
-  .Post-menu-link{
-    text-decoration: none;
-    color: #b59f5b;
-  }
-
-  .Post-menu-link:hover{
-    text-decoration: underline;
-  }
-
-  .Post-list-item:nth-child(n+2){
-    margin-left: 19px;
   }
 
   .Post-title{
@@ -496,11 +474,12 @@
   .Tegs-list-item{
     display: block;
     border: 3px solid #ededed;
-    padding: 4px 13px 3px 14px;
+    padding: 2px 13px 2px 13px;
     list-style-type: none;
     height: 30px;
     margin-top: 6px;
     margin-right: 6px;
+    font-size: 0.875rem;
   }
 
   .Tegs-list-item:hover{
@@ -510,6 +489,8 @@
   .Tegs-menu-link{
     text-decoration: none;
     color: #0f0d0e;
+    font-size: 0.75rem;
+
   }
 
   .Themes-list{
@@ -586,8 +567,6 @@
     border: 3px solid #d3c59d;
     padding: 45px 20px 0px 20px;
     margin-top: -30px;
-    /* flex: 1 1 auto; */
-    /* height: 100%; */
     flex-grow: 1;
     padding-bottom: 25px;
   }
@@ -729,10 +708,10 @@
     width: 390px;
     height: 590px;
     background-color:#ffffff;
-    position: absolute;
-    top: 240px;
+    position: fixed;
     left: 50%;
-    margin-left: -195px;
+    top: 50%;
+    transform: translate(-50%, -50%);
     z-index: 105;
   }
   
@@ -834,8 +813,6 @@
   }
 
   
-
-
   @media (min-width: 641px) and (max-width: 1199px){
     .header-container{
       padding: 40px 35px 125px 35px;
@@ -865,10 +842,15 @@
       flex-wrap: wrap;
       margin: 0%;
     }
+
+    .NowTrend_Font{
+      font-size: 1.063rem;
+    }
       
     .NowTrend_Post{
       width: calc(50% - 3px);
-      margin-bottom: 5px;        
+      margin-bottom: 5px;
+      min-height: 245px;
     }
       
     .NowTrend_Post:nth-child(odd) {
@@ -896,6 +878,10 @@
       flex-direction: column;
       padding-bottom: 20px;
     }
+
+    .Post-menu-link {
+      font-size: 0.875rem;
+     }
 
     .PostList{
       width: 100%;
@@ -962,6 +948,20 @@
     }
   }
 
+  @media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape){
+    .NowTrend{
+      flex-wrap: wrap;
+      margin: 0%;
+    }
+      
+    .NowTrend_Post{
+      width: calc(25% - 12px);
+    }
+      
+    .NowTrend_Post:nth-child(1), .NowTrend_Post:nth-child(2), .NowTrend_Post:nth-child(3) {
+      margin-right: 5px;
+    }
+  }
 
 
 
@@ -973,7 +973,6 @@
 
       .header-title{
         width: 100%;
-        /* margin-top: 105px; */
       }
 
       .menu-list{
@@ -1007,15 +1006,32 @@
         margin: 0%;
       }
 
+      .NowTrend_content {
+        padding: 32px 18px 30px 18px;
+    }
+
+    .Post-menu-link {
+      font-size: 0.875rem;
+     }
+
       .NowTrend_Title {
         margin-top: 40px;
         margin-bottom: 25px;
+      }
+
+      .NowTrend_Font{
+        font-size: 1rem;
       }
       
       .NowTrend_Post{
         width: 100%;
         margin-bottom: 5px;
+        min-height: 230px;
       }
+
+      .NowTrend_Post:nth-child(1), .NowTrend_Post:nth-child(2), .NowTrend_Post:nth-child(3) {
+        margin-right: 0;
+    }
 
       .Content-box{
         flex-wrap: wrap;
@@ -1100,7 +1116,44 @@
     margin-bottom: 45px;
   }
 
-  .popup{
-    top: 60px;
+  .popup {
+    max-width: 85vw;
+    max-height: 80vh;
   }
+
+  .popup-container {
+    padding: 15px 25px;    
+    overflow: scroll;
+    height: 75vh;
+
+  }
+
+  /* .popup-title {
+    font-size: 3vh;
+  } */
+
+  .Caption-line::after {
+    margin-bottom: 10px
+  }
+;
+  }
+
+  @media (max-width: 640px) and (orientation: landscape){
+    .NowTrend{
+      flex-wrap: wrap;
+      margin: 0%;
+    }
+      
+    .NowTrend_Post{
+      width: calc(50% - 3px);
+      margin-bottom: 5px;        
+    }
+      
+    .NowTrend_Post:nth-child(odd) {
+      margin-right: 5px;       
+    }
+
+    .NowTrend_Post:nth-child(even) {
+      margin-right: 0px;       
+    }
   }
